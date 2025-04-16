@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-login-profile-app';
+  get isLoggedIn(): boolean {
+    return !!localStorage.getItem('token');
+  }
 }
